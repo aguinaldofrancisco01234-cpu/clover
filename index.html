@@ -315,7 +315,7 @@
       <div class="history-item active">Conversa Atual</div>
     </div>
 
-    <div class="sidebar-footer" id="keyConfigBtn" title="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">
+    <div class="sidebar-footer" id="keyConfigBtn" title="Clique para alterar a Chave de API">
       <div class="sidebar-footer-left">
         <div class="avatar-mini"></div>
         <span>Configurar Chave API</span>
@@ -389,7 +389,6 @@
   const keyConfigBtn = document.getElementById('keyConfigBtn');
   const embersEl = document.getElementById('embers');
 
-  // Histórico enviado para a IA
   let conversation = [
     { role: "system", content: "Você é a Aurum, uma assistente virtual de inteligência artificial extremamente elegante, refinada, precisa e prestativa. Responda em português com boa formatação." }
   ];
@@ -429,7 +428,7 @@
   function getApiKey() {
     let key = localStorage.getItem('groq_api_key');
     if (!key) {
-      key = prompt('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');
+      key = prompt('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');
       if (key && key.trim().length > 10) {
         localStorage.setItem('groq_api_key', key.trim());
       } else {
@@ -441,7 +440,7 @@
 
   keyConfigBtn.addEventListener('click', () => {
     const currentKey = localStorage.getItem('groq_api_key') || '';
-    const newKey = prompt('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);
+    const newKey = prompt('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);
     if (newKey !== null) {
       if (newKey.trim() === '') {
         localStorage.removeItem('groq_api_key');
@@ -459,7 +458,7 @@
 
     const apiKey = getApiKey();
     if(!apiKey){
-      alert('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');
+      alert('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');
       return;
     }
 
